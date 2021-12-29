@@ -1,8 +1,7 @@
 import Slider from '@mui/material/Slider';
-import { useProductFilter } from 'context/productFilterProvider';
+import { FiltersKeys, useProductFilter } from 'context/productFilterProvider';
 import { useState } from 'react';
 import styles from './Filter.module.css';
-import { FiltersKeys } from './Filters';
 
 type FilterItemProps = {
   name: string;
@@ -36,7 +35,11 @@ const FilterItem = ({
   };
   const filterComponents = {
     select: (
-      <select onChange={handleValueChange} value={value as string}>
+      <select
+        onChange={handleValueChange}
+        value={value as string}
+        title={`select ${name}`}
+      >
         <option>Select an option</option>
         {values.map((v, index) => (
           <option key={`${name}-${index}`}>{String(v)}</option>
@@ -68,7 +71,7 @@ const FilterItem = ({
 };
 
 export function Filter() {
-  const { products, filters, selectFilter, clearFilter, clearAllFilters } =
+  const { filters, selectFilter, clearFilter, clearAllFilters } =
     useProductFilter();
   const [showFilters, setShowFilters] = useState(false);
   const handleValueChange = (value: unknown, filterName: FiltersKeys) => {
