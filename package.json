@@ -1,0 +1,41 @@
+{
+  "name": "filter",
+  "private": true,
+  "scripts": {
+    "dev": "next dev & json-server --watch db.json --port 3004",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "test": "jest --watch",
+    "watch": "watch 'clear && npm run test | tap-nirvana && npm run -s lint' "
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.6",
+    "axios": "^0.24.0",
+    "next": "latest",
+    "npm": "^8.3.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swr": "^1.1.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/node": "17.0.5",
+    "@types/react": "17.0.38",
+    "babel-jest": "^27.4.5",
+    "eslint": "^8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "5.0.1",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.4"
+  }
+}

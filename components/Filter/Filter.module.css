@@ -1,0 +1,37 @@
+.show-filter,
+.clear-filter,
+.filters-header__item {
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.show-filter:hover {
+  text-decoration-line: underline;
+}
+
+.filters {
+  position: absolute;
+  width: 540px;
+  height: 219px;
+  left: 440px;
+  top: 82 px;
+  padding: 60px;
+  background: #ffffff;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-item {
+  display: flex;
+  min-width: 300px;
+  justify-content: space-between;
+}
