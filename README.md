@@ -2,11 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
 npm ci
-npm run dev
 ```
+
+Create .env.local file to local development
+
+```bash
+  cp env.sample .env.local
+```
+
+Run the project
+
+```bash
+  npm run dev
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
